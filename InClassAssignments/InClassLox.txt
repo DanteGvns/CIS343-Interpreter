@@ -1,0 +1,31 @@
+print "First in class assignment running";
+
+fun isDivisible(n, x) {
+    while (n >= x) {
+        n = n - x;
+    }
+    return n == 0;
+}
+
+fun isPrime(n) {
+    if (n <= 1) return false;
+    var i = 2;
+    while (i * i <= n) {
+       if (isDivisible(n, i)) {
+	  return false;
+	}
+	i = i + 1;
+    }
+      return true;
+}
+
+var statement = isPrime(3);
+print statement;
+var statement = isPrime(9);
+print statement;
+var statement = isPrime(7);
+print statement;
+var statement = isPrime(15);
+print statement;
+var statement = isPrime(13);
+print statement;
